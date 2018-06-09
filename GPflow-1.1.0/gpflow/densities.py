@@ -37,6 +37,10 @@ def bernoulli(p, y):
 def poisson(lamb, y):
     return y * tf.log(lamb) - lamb - tf.lgamma(y + 1.)
 
+def negative_binomial(m,y,alpha):
+    k = 1 / alpha
+    return tf.lgamma(k + Y) - tf.lgamma(Y + 1) - tf.lgamma(k) + Y * tf.log(m / (m + k)) - k * tf.log(1 + m * alpha) 
+      
 
 def exponential(lamb, y):
     return - y/lamb - tf.log(lamb)

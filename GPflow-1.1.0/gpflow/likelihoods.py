@@ -220,12 +220,13 @@ class NegBinom(Likelihood):
         """
         P(Y) = Gamma(k + Y) / (Y! Gamma(k)) * (m / (m+k))^Y * (1 + m/k)^(-k)
         """
- 
+        '''
         m = self.invlink(F)
         k = 1 / self.alpha
                        
         return tf.lgamma(k + Y) - tf.lgamma(Y + 1) - tf.lgamma(k) + Y * tf.log(m / (m + k)) - k * tf.log(1 + m * self.alpha) 
-        
+        '''
+        return densities.negative_binomial(self.invlink(F), Y, self.alpha)
    
     @params_as_tensors
     def conditional_mean(self, F):
