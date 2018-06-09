@@ -80,7 +80,7 @@ To cite GPflow, please reference the [JMLR paper](http://www.jmlr.org/papers/vol
    author = {Matthews, Alexander G. de G. and {van der Wilk}, Mark and Nickson, Tom and
 	Fujii, Keisuke. and {Boukouvalas}, Alexis and {Le{\'o}n-Villagr{\'a}}, Pablo and
 	Ghahramani, Zoubin and Hensman, James},
-    title = "{{GP}flow: A {G}aussian process library using {T}ensor{F}low}",
+    title = "{ {GP}flow: A {G}aussian process library using {T}ensor{F}low}",
   journal = {Journal of Machine Learning Research},
   year    = {2017},
   month = {apr},
